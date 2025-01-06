@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: logger-dep
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: logger-dep
+  template:
+    metadata:
+      labels:
+        app: logger-dep
+    spec:
+      containers:
+        - name: logger-dep
+          image: rashmika31601/logger:v1.0
