@@ -22,14 +22,20 @@
 
 6. Login to docker "docker login".
 
-7. Push the docker image to docker,
-   "docker push rashmika31601/server:v0.1"
+7. Push the docker image to docker, "docker push rashmika31601/server:v0.1"
 
-8. Create Kube,
-   "kubectl run server-dep --image=rashmika31601/server:v0.1 --port=80"
+![](Images/Img5.JPG)
+
+8. Create a kubectl deployment. To start deployment run "kubectl create deployment server-dep --image=rashmika31601/server:v1.0".
 
 9. Check the pods, kubectl get pods
 
-10. Use "kubectl logs -f server-dep" to see the response
+![](Images/Img7.JPG)
 
-![](Images/Img4.JPG)
+10. Use following commands to delete or apply yaml config, (The cluster might not work properly if config is incorrect)
+    kubectl delete deployment server-dep
+    kubectl apply -f manifests/deployment.yaml
+
+11. Use "kubectl logs -f server-dep-c4b64db94-8ldrh" to see the response
+
+![](Images/Img8.JPG)
