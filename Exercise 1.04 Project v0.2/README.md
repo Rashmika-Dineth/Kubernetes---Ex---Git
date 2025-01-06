@@ -16,6 +16,6 @@
 
 ![](Images/Img3.JPG)
 
-4. Apply the yaml to cluster "kubectl apply -f manifests/deployment.yaml"
+4. Apply the yaml to cluster "kubectl apply -f manifests/deployment.yaml".
 
 ![](Images/Img4.JPG)
