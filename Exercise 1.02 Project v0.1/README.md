@@ -1,23 +1,24 @@
-## Generate the server function using nodejs
+# Exercise 1.02: Project v0.1
+
+## Create a web server that outputs "Server started in port NNNN" when it is started and deploy it into your Kubernetes cluster. Please make it so that an environment variable PORT can be used to choose that port. You will not have access to the port when it is running in Kubernetes yet. We will configure the access when we get to networking.
+
+1. Generate the server function using nodejs
 
 ![](Images/Img1.JPG)
 
-## Deploy the server function to Kube
-
-1. Update the Docker file.
+2. Update the Docker file.
 
 ![](Images/Img2.JPG)
 
-2. Run the command "docker build -t server ." to generate the docker image
-
-3. Tag the docker name and version "docker tag server rashmika31601/server:v0.1"
-
-4. Update the manifest folder deployment yaml file, The image name and app name must corrected,
+3. Run the command "docker build -t server ." to generate the docker image
 
 ![](Images/Img3.JPG)
 
-5. Build the docker file using,
-   "docker build -t rashmika31601/server:v0.1 ."
+4. Tag the docker name and version "docker tag server rashmika31601/server:v0.1"
+
+5. Update the manifest folder deployment yaml file, The image name and app name must corrected,
+
+![](Images/Img4.JPG)
 
 6. Login to docker "docker login".
 
